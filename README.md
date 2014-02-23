@@ -5,7 +5,7 @@
 not, what were the reasons?*
 
 The aim of this project was to increase the perfomance of PIERNIK code in a case where the computational domain is
-decomposed into largee number of smaller grids and each concurrent processes is assigned a signficant number of those
+decomposed into large number of smaller grids and each concurrent processes is assigned a signficant number of those
 grids. Exchaning data between neighboring grid pieces after each update of the state of the fluid in the MHD solver
 caused severe bottleneck due to MPI communication. Performed optimization greatly improved scalability of the code (see
 fig. 1) nearly reaching the reference perfomance in the situation when each computational process is assigned only one
