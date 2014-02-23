@@ -147,7 +147,10 @@ Performance analysis was conducted using Vampir and occasionally Scalasca.
 
 ### What are the main actions that you did for optimization or improvement of your code on the PRACE machines? What feature was to be optimized? What was the bottleneck? What solution did you use (if any)? (Maximum 500 words)
 
-???
+Main actions we did for optimization of PIERNIK was analisys of code performance using Vampir to identify main
+bottlenecks. We found severe fragmentation of MPI messages causing late-senders and early-receivers and thus crippling
+code's scalability. We got rid off several unnecessary points of communication, coalesced messages sent between pair of
+processes, used direct memory access instead of MPI where applicable.
 
 ### Publications or reports regarding the development and optimization. 
 
