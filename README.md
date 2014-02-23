@@ -117,13 +117,19 @@ Finally, AMR  can now be more selective. It doesn't refine the full block at onc
 will covered by finer grid blocks. This greatly improves the performance of initial iterations of grid structure and
 saves few blocks from unnecessary refinements during regular refinement update. [7]
 
- [1] https://github.com/piernik-dev/piernik/pull/63
- [2] https://github.com/piernik-dev/piernik/pull/64
- [3] https://github.com/piernik-dev/piernik/pull/68
- [4] https://github.com/piernik-dev/piernik/pull/81
- [5] https://github.com/piernik-dev/piernik/pull/59
- [6] https://github.com/piernik-dev/piernik/pull/65
- [7] https://github.com/piernik-dev/piernik/pull/87
+[1] https://github.com/piernik-dev/piernik/pull/63
+
+[2] https://github.com/piernik-dev/piernik/pull/64
+
+[3] https://github.com/piernik-dev/piernik/pull/68
+
+[4] https://github.com/piernik-dev/piernik/pull/81
+
+[5] https://github.com/piernik-dev/piernik/pull/59
+
+[6] https://github.com/piernik-dev/piernik/pull/65
+
+[7] https://github.com/piernik-dev/piernik/pull/87
 
 ### Summary of the obtained results from the enabling process (Maximum 500 words)
 *Please describe the effort you spent. Which progress did you achieve? Please describe in detail which enabling work was performed (porting, work on algorithms, I/O…etc.). Which problems did you experience?*
