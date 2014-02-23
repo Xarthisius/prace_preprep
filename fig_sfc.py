@@ -19,8 +19,8 @@ for fname, color, label in inp:
     #        / (data[:, 1] / data[0, 1])
     #  data2 = 1.0 - np.array([2 ** -i for i in np.arange(7)]) \
     #        / (data[:, 2] / data[0, 2])
-    plt.loglog(data[:, 0], pp * (data1[0] * 3 + data2[0]) /
-               (data1 * 3 + data2), 'o-', basex=2, basey=2, label=label,
+    plt.loglog(data[:, 0], pp * (data1[0] * 0 + data2[0]) /
+               (data1 * 0 + data2), 'o-', basex=2, basey=2, label=label,
                color=color)
 plt.xlim((2 ** 5, 2 ** 13))
 plt.ylim((2 ** -1, 2 ** 7))
