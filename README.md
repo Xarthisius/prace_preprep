@@ -102,7 +102,7 @@ way and update only the guardcells affected by recent update. The solver used se
 happens in separate messages.  Analysis performed with Vampir has shown that it results in a great number of small
 messages causing some process to lag behind the collective. First step in reducing the MPI overhead relied on
 identification group of processes running on the same computational node and converting MPI calls into direct memory
-access [1,2].
+access [1]. Additionally, more similar MPI usage patterns were identified [2] and are scheduled to be improved in similar way.
 
 In attempt to further deal with this problem we have implemented coalescing MPI messages wherever it was applicable,
 i.e. all messages exchanging in one step during a pair of processes are now put into common buffer and only one message
