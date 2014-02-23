@@ -127,11 +127,20 @@ saves few blocks from unnecessary refinements during regular refinement update. 
 ### Summary of the obtained results from the enabling process (Maximum 500 words)
 *Please describe the effort you spent. Which progress did you achieve? Please describe in detail which enabling work was performed (porting, work on algorithms, I/O…etc.). Which problems did you experience?*
 
+As was shown in figures 1 - 3 several improvements were achieved. Overall the performance of non-uniform and adaptive
+meshes, that are strictly necessary for fulfilling scientific goals of the project in the future, was significantly
+boosted. Additionally we have ported the code to latest Cray compilers [8] which will allow to utilize PIERNIK on
+broader range of HPC sites in EU.
+
+[8] https://github.com/piernik-dev/piernik/pull/46
+
 ### If applicable, which tools did you use to analyze your code? (e.g. Scalasca, Vampir…etc.)  (Maximum 500 words)
 
 Peformance analysis was conducted using Vampir and ocassionaly Scalasca.
 
 ### What are the main actions that you did for optimization or improvement of your code on the PRACE machines? What feature was to be optimized? What was the bottleneck? What solution did you use (if any)? (Maximum 500 words)
+
+???
 
 ### Publications or reports regarding the development and optimization. 
 
@@ -141,8 +150,8 @@ None
 
 *What are your conclusions? What do you think of the usability of the assigned PRACE system? Which is the relevance of the obtained results for the stated scientific goals? Please, explain the outlook on the possible future work.*
 
-Although 
-Obtained performance improvements will allow to achieve scientific goals of the project
+Obtained performance improvements will allow to achieve scientific goals of the project using a regular PRACE time
+allocation on TIER-0 infrastructre.
 
 ## Feedback and technical deployment
 
