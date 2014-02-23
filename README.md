@@ -16,9 +16,20 @@ and fig. 3), which was dominant in simulations using Adaptive Mesh Refinement (A
 
 ![Figure 1](fig1.png "Figure 1. Strong scalability of jeans problem")
 
+**Fig. 1** Strong scaling curves for uniform grid runs of moderate sizes (512^3 green, 1024^3 yellow) are taken as reference for
+optimization. Black lines are ideal scaling curves for each of those runs taking into account the ratio of total number
+of cells (including ghostzone layers) to the number of physically valid cells. Dashed black line shows ideal speed-up.
+Red curve shows PIERNIK's performance for many grids per computational process before this project, blue curve shows
+result of optimization.
+
 ![Figure 2](fig2.png "Figure 2. ")
 
+**Fig. 2** Strong scaling curve in AMR run showing difference in performance after implementation of domain
+decomposition using space-filling curve.
+
 ![Figure 3](fig3.png "Figure 3. ")
+
+**Fig. 3** Performance imporvement obtained by using SFC for domain decompostion.
 
 ### Data to deploy scalability curves
 
