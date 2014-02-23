@@ -13,15 +13,12 @@ big chunk of computational domain. Moreover, we significantly cut the time spent
 and fig. 3), which was dominant in simulations using Adaptive Mesh Refinement (AMR)
 
 ### Images or graphics showing results from the scalability testing (Minimum resolution of 300 dpi)
-*Please attach the images to this form.
-All tables and figures (including photographs, schemas, graphs and diagrams) should be numbered with Arabic numerals
-(1,2,...n) and include a descriptive caption. 
 
-should be numbered with Arabic numerals and include a descriptive heading
-All figures (including photographs, schemas, graphs and diagrams ) should be numbered with Arabic numerals (1,2,...n).
-All photographs, schemas, graphs and diagrams are to be referred to as figures*
+![Figure 1](fig1.png "Figure 1. Strong scalability of jeans problem")
 
-![Figure 1](fig1.png "Optional title")
+![Figure 2](fig2.png "Figure 2. ")
+
+![Figure 3](fig3.png "Figure 3. ")
 
 ### Data to deploy scalability curves
 
