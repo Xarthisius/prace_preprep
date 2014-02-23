@@ -4,11 +4,11 @@
 *Show the scaling behavior of your application. Which progress did you achieved? Does it fulfill your expectations? If
 not, what were the reasons?*
 
-The aim of this project was to increase the perfomance of PIERNIK code in a case where the computational domain is
-decomposed into large number of smaller grids and each concurrent processes is assigned a signficant number of those
-grids. Exchaning data between neighboring grid pieces after each update of the state of the fluid in the MHD solver
+The aim of this project was to increase the performance of PIERNIK code in a case where the computational domain is
+decomposed into large number of smaller grids and each concurrent processes is assigned a significant number of those
+grids. Exchanging data between neighboring grid pieces after each update of the state of the fluid in the MHD solver
 caused severe bottleneck due to MPI communication. Performed optimization greatly improved scalability of the code (see
-fig. 1) nearly reaching the reference perfomance in the situation when each computational process is assigned only one
+fig. 1) nearly reaching the reference performance in the situation when each computational process is assigned only one
 big chunk of computational domain. Moreover, we significantly cut the time spent for regridding operation (see fig. 2
 and fig. 3), which was dominant in simulations using Adaptive Mesh Refinement (AMR)
 
@@ -18,7 +18,7 @@ and fig. 3), which was dominant in simulations using Adaptive Mesh Refinement (A
 
 **Fig. 1** Strong scaling curves for uniform grid runs of moderate sizes (512^3 green, 1024^3 yellow) are taken as reference for
 optimization. Black lines are ideal scaling curves for each of those runs taking into account the ratio of total number
-of cells (including ghostzone layers) to the number of physically valid cells. Dashed black line shows ideal speed-up.
+of cells (including guardcell layers) to the number of physically valid cells. Dashed black line shows ideal speed-up.
 Red curve shows PIERNIK's performance for many grids per computational process before this project, blue curve shows
 result of optimization.
 
@@ -29,7 +29,7 @@ decomposition using space-filling curve.
 
 ![Figure 3](fig3.png "Figure 3. ")
 
-**Fig. 3** Performance imporvement obtained by using SFC for domain decompostion.
+**Fig. 3** Performance improvement obtained by using SFC for domain decomposition.
 
 ### Data to deploy scalability curves
 
@@ -63,7 +63,7 @@ B) Strong scaling curve
 | --------------- | --------------- | ------------------------- | --------------- | ----------------- |
 | 512   | 320.0  | 1.00 | 16  | 512  |
 | 1024  | 170.0  | 1.88 | 32  | 1024 |
-| 2048  | 91.6   | 3.49 | 64  | 2048  |
+| 2048  | 91.6   | 3.49 | 64  | 2048 |
 | 4096  | 52.8   | 6.07 | 128 | 4096 |
 | 8192  | 37.8   | 8.47 | 256 | 8192 |
 
@@ -109,8 +109,8 @@ i.e. all messages exchanging in one step during a pair of processes are now put 
 is sent [3,4]. This implementation significantly decreased fragmentation of communication. 
 
 Additionally, in order to decrease the number of MPI messages we have implemented domain decomposition using
-space-filling curve (SFC), which provides high "localization", i.e. neighbouring grids are located on the same
-processes as much as possible. When carefully implemented, properties of SFC can allow for fast neighbour searching [5,6].
+space-filling curve (SFC), which provides high "localization", i.e. neighboring grids are located on the same
+processes as much as possible. When carefully implemented, properties of SFC can allow for fast neighbor searching [5,6].
 This is essential for reducing costs of AMR bookkeeping.
 
 Finally, AMR  can now be more selective. It doesn't refine the full block at once, but only the required regions
@@ -143,7 +143,7 @@ broader range of HPC sites in EU.
 
 ### If applicable, which tools did you use to analyze your code? (e.g. Scalasca, Vampir…etc.)  (Maximum 500 words)
 
-Peformance analysis was conducted using Vampir and ocassionaly Scalasca.
+Performance analysis was conducted using Vampir and occasionally Scalasca.
 
 ### What are the main actions that you did for optimization or improvement of your code on the PRACE machines? What feature was to be optimized? What was the bottleneck? What solution did you use (if any)? (Maximum 500 words)
 
@@ -158,16 +158,16 @@ None
 *What are your conclusions? What do you think of the usability of the assigned PRACE system? Which is the relevance of the obtained results for the stated scientific goals? Please, explain the outlook on the possible future work.*
 
 Obtained performance improvements will allow to achieve scientific goals of the project using a regular PRACE time
-allocation on TIER-0 infrastructre.
+allocation on TIER-0 infrastructure.
 
 ## Feedback and technical deployment
 
 ### Feedback on the centers/PRACE mechanism (Maximum 500 words)
 
 We are very pleased with the cooperation with the HLRS. All our problems concerning software and hardware issues were
-dealt swiftly with and in a highly professional manner. Overall perfomance of the assigned system in terms of I/O,
+dealt swiftly with and in a highly professional manner. Overall performance of the assigned system in terms of I/O,
 interconnect etc. was certainly high in comparison to other HPC sites that we have access to within other projects. We
-would be very glad if could be obtained computiational time at Hermit in the future.
+would be very glad if could be obtained computational time at Hermit in the future.
 
 ### Explanation of how the computer time was used compared with the work plan presented in the proposal. Justification of discrepancies, especially if the computer time was not completely used. (Maximum 500 words)
 
