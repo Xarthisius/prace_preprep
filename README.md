@@ -110,7 +110,8 @@ is sent [3,4]. This implementation significantly decreased fragmentation of comm
 
 Additionally, in order to decrease the number of MPI messages we have implemented domain decomposition using
 space-filling curve (SFC), which provides high "localization", i.e. neighbouring grids are located on the same
-processes as much as possible [5,6].
+processes as much as possible. When carefully implemented, properties of SFC can allow for fast neighbour searching [5,6].
+This is essential for reducing costs of AMR bookkeeping.
 
 Finally, AMR  can now be more selective. It doesn't refine the full block at once, but only the required regions
 will covered by finer grid blocks. This greatly improves the performance of initial iterations of grid structure and
