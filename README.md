@@ -21,6 +21,8 @@ should be numbered with Arabic numerals and include a descriptive heading
 All figures (including photographs, schemas, graphs and diagrams ) should be numbered with Arabic numerals (1,2,...n).
 All photographs, schemas, graphs and diagrams are to be referred to as figures*
 
+![Figure 1](fig1.png "Optional title")
+
 ### Data to deploy scalability curves
 
 *A) Some typical user test cases
