@@ -22,14 +22,18 @@ of cells (including guardcell layers) to the number of physically valid cells. D
 Red curve shows PIERNIK's performance for many grids per computational process before this project, blue curve shows
 result of optimization.
 
-![Figure 2](fig2.png "Figure 2. ")
+![Figure 2](fig2.png "Figure 2. Strong scalability for AMR")
 
 **Fig. 2** Strong scaling curve in AMR run showing difference in performance after implementation of domain
 decomposition using space-filling curve.
 
-![Figure 3](fig3.png "Figure 3. ")
+![Figure 3](fig3.png "Figure 3. SFC vs brute force")
 
 **Fig. 3** Performance improvement obtained by using SFC for domain decomposition.
+
+![Figure 4](fig4.png "Figure 4. Weak scaling")
+
+**Fig. 4** Weak scaling curve for Jeans problem using 64^3 cells per process.
 
 ### Data to deploy scalability curves
 
